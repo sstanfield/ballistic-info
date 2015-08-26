@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:padding="5dp"
+		>
+
+	<TableLayout android:layout_width="fill_parent"
+				 android:layout_height="wrap_content"
+				 android:layout_alignParentTop="true"
+				 android:id="@+id/drop_table"
+				 android:stretchColumns="*"
+			>
+		<TableRow android:layout_width="fill_parent"
+				  android:layout_height="wrap_content">
+			<LinearLayout android:id="@+id/drop_layout_minus"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+			>
+				<TextView
+				    style="@style/Label.large"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Drop:"
+				/>
+				<TextView android:id="@+id/drop_unit_label_minus"
+				    style="@style/Label"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="-50"
+					android:textColor="#FFFFFFFF"
+				/>
+			</LinearLayout>
+			<LinearLayout android:id="@+id/drop_layout"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+			>
+				<TextView
+				    style="@style/Label.large"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Drop:"
+				/>
+				<TextView android:id="@+id/drop_unit_label"
+				    style="@style/Label"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="MOA"
+					android:textColor="#FFFFFFFF"
+					android:drawableRight="@android:drawable/arrow_down_float"
+				/>
+			</LinearLayout>
+			<LinearLayout android:id="@+id/drop_layout_plus"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+			>
+				<TextView
+				    style="@style/Label.large"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Drop:"
+				/>
+				<TextView android:id="@+id/drop_unit_label_plus"
+				    style="@style/Label"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="+50"
+					android:textColor="#FFFFFFFF"
+				/>
+			</LinearLayout>
+		</TableRow>
+		<TableRow android:layout_width="fill_parent"
+				  android:layout_height="wrap_content">
+			<TextView android:id="@+id/drop_minus"
+			    style="@style/Label.val"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="0"
+				android:padding="5dp"
+			/>
+			<TextView android:id="@+id/drop"
+				style="@style/Label.high"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="0"
+				android:padding="5dp"
+			/>
+			<TextView android:id="@+id/drop_plus"
+				style="@style/Label.val"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="0"
+				android:padding="5dp"
+			/>
+		</TableRow>
+	</TableLayout>
+	<TableLayout android:layout_width="fill_parent"
+				 android:layout_height="wrap_content"
+				 android:layout_below="@id/drop_table"
+				 android:id="@+id/wind_table"
+			>
+			<TableRow android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					>
+				<include layout="@layout/wind_data"/>
+			</TableRow>
+	</TableLayout>
+	<TableLayout android:layout_width="fill_parent"
+				 android:layout_height="wrap_content"
+				 android:layout_below="@id/wind_table"
+				 android:id="@+id/zero_table"
+			>
+			<TableRow android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					>
+				<include layout="@layout/zero_range"/>
+				<include layout="@layout/shooting_angle"/>
+			</TableRow>
+	</TableLayout>
+
+	<LinearLayout android:orientation="vertical"
+				  android:layout_width="fill_parent"
+				  android:layout_height="wrap_content"
+				  android:layout_below="@id/zero_table"
+			>
+		<TextView android:id="@+id/atmo"
+				  style="@style/Label"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:text="[Atmosphere Off]"
+				/>
+		<TextView android:id="@+id/spindrift"
+				  style="@style/Label"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:text="[Spin Drift On]"
+				/>
+		<LinearLayout android:orientation="horizontal"
+					  android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+				>
+			<TextView android:layout_width="wrap_content"
+					  style="@style/Label"
+					  android:layout_height="wrap_content"
+					  android:text="["
+					/>
+			<TextView android:id="@+id/velocity"
+					  style="@style/Label"
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"
+					  android:text="0"
+					/>
+			<TextView android:id="@+id/time"
+					  style="@style/Label"
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"
+					  android:text="0"
+					/>
+			<TextView android:id="@+id/energy"
+					  style="@style/Label"
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"
+					  android:text="0"
+					/>
+			<TextView android:layout_width="wrap_content"
+					  style="@style/Label"
+					  android:layout_height="wrap_content"
+					  android:text="]"
+					/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<transapps.ballistic.widgets.EditNumberSliders
+			android:id="@+id/range_slider"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_alignParentBottom="true"
+			android:padding="5dp"
+			/>
+
+</RelativeLayout>

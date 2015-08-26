@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical" >
+		<LinearLayout android:orientation="horizontal"
+					  android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+				>
+			<TextView android:text="Atmospheric Settings: "
+					  android:padding="5dp"
+					  android:layout_height="wrap_content"
+					  android:layout_width="wrap_content"
+					/>
+			<Button android:id="@+id/atmo_on_button"
+					android:text="Off"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					/>
+		</LinearLayout>
+
+		<LinearLayout android:orientation="horizontal"
+					  android:paddingBottom="10dp"
+					  android:layout_width="fill_parent"
+					  android:layout_height="wrap_content">
+			<CheckBox android:id="@+id/density_altitude_check"
+					  android:text="Density Altitude"
+					  android:layout_height="wrap_content"
+					  android:layout_width="wrap_content"
+					/>
+			<CheckBox android:id="@+id/atmospherics_check"
+					  android:text="Atmospherics"
+					  android:layout_height="wrap_content"
+					  android:layout_width="wrap_content"
+					/>
+		</LinearLayout>
+
+		<View	android:layout_width="fill_parent"
+				 android:layout_height="1dp"
+				 android:background="@android:color/darker_gray"/>
+		<TableLayout android:layout_width="fill_parent"
+					 android:layout_height="wrap_content"
+					 android:stretchColumns="1,5">
+			<TableRow>
+				<TextView android:text="Density Altitude:"
+						  android:padding="5dp"
+						/>
+				<EditText android:id="@+id/altitude_value"
+						  android:padding="5dp"
+						  android:inputType="numberDecimal"
+						/>
+				<Spinner android:id="@+id/altitude_unit_value"
+						 android:padding="5dp"
+						/>
+				<View	android:layout_width="1dp"
+						android:layout_height="fill_parent"
+						android:background="@android:color/darker_gray"/>
+				<TextView android:text="Barometer:"
+						  android:padding="5dp"
+						/>
+				<EditText android:id="@+id/barometer_value"
+						  android:padding="5dp"
+						  android:inputType="numberDecimal"
+						/>
+				<Spinner android:id="@+id/barometer_unit_value"
+						 android:padding="5dp"
+						/>
+			</TableRow>
+			<TableRow>
+				<TextView android:text="Temp:"
+						  android:padding="5dp"
+						/>
+				<EditText android:id="@+id/temp_value"
+						  android:padding="5dp"
+						  android:inputType="numberDecimal"
+						/>
+				<Spinner android:id="@+id/temp_unit_value"
+						 android:padding="5dp"
+						/>
+				<View	android:layout_width="1dp"
+						 android:layout_height="fill_parent"
+						 android:background="@android:color/darker_gray"/>
+				<TextView android:text="Humidity:"
+						  android:padding="5dp"
+						/>
+				<EditText android:id="@+id/humidity_value"
+						  android:padding="5dp"
+						  android:inputType="numberDecimal"
+						/>
+			</TableRow>
+			<TableRow>
+				<TextView android:text="Air Density:"
+						  android:padding="5dp"
+						/>
+				<TextView android:id="@+id/density_value"
+						  android:padding="5dp"
+						/>
+				<Spinner android:id="@+id/density_unit_value"
+						 android:padding="5dp"
+						/>
+				<View	android:layout_width="1dp"
+						 android:layout_height="fill_parent"
+						 android:background="@android:color/darker_gray"/>
+				<TextView android:text="Mach 1:"
+						  android:padding="5dp"
+						/>
+				<TextView android:id="@+id/mach_value"
+						  android:padding="5dp"
+						/>
+				<Spinner android:id="@+id/mach_unit_value"
+						 android:padding="5dp"
+						/>
+			</TableRow>
+		</TableLayout>
+		<View	android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:background="@android:color/darker_gray"/>
+		<LinearLayout android:orientation="horizontal"
+					  android:layout_width="fill_parent"
+					  android:paddingTop="10dp"
+					  android:layout_height="wrap_content">
+			<Button android:id="@+id/standard_atmo_button"
+					android:text="Reset"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					/>
+			<CheckBox android:id="@+id/sensors_button"
+					  android:text="Sensors"
+					  android:layout_height="wrap_content"
+					  android:layout_width="wrap_content"
+					/>
+		</LinearLayout>
+	</LinearLayout>
+</merge>

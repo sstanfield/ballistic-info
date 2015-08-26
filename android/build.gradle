@@ -1,0 +1,122 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath 'com.android.tools.build:gradle:1.1.1'
+	}
+}
+
+apply plugin: 'android'
+apply plugin: 'maven-publish'
+
+
+dependencies {
+	compile('com.android.support:support-v4:18.0.+')
+	compile project(':lib')
+}
+
+def keystore = "${project.ext.homeDir}${File.separator}.m2${File.separator}takey.keystore"
+File pprops
+if (System.getenv().containsKey('GRADLE_CREDS_FILE')) {
+	pprops = new File(System.getenv()['GRADLE_CREDS_FILE'])
+} else {
+	pprops = new File("..${File.separator}transapps-key${File.separator}mavencreds.prop")
+}
+
+
+if (pprops.exists()) {
+	publishing {
+		repositories {
+			mavenLocal()
+
+			maven {
+				Properties mavenprops = new Properties()
+				mavenprops.load(new FileInputStream(pprops))
+				credentials {
+					username mavenprops.getProperty("username")
+					password mavenprops.getProperty("password")
+				}
+				if (project.version.endsWith('-SNAPSHOT')) {
+					url mavenprops.getProperty("nexus_snapshot")
+				} else {
+					url mavenprops.getProperty("nexus")
+				}
+			}
+
+			publications {
+				maven(MavenPublication) {
+					groupId 'transapps'
+					artifactId 'ballistic-apk'
+					version '1.0'
+
+					pom.withXml {
+						def dependenciesNode = null // TODO need to search for depencenciesNode
+
+						if (dependenciesNode == null) {
+							dependenciesNode = asNode().appendNode("dependencies")
+						}
+
+						//Iterate over the compile dependencies (we don't want the test ones), adding a <dependency> node for each
+						configurations.compile.allDependencies.each {
+							def dependencyNode = dependenciesNode.appendNode('dependency')
+							dependencyNode.appendNode('groupId', it.group)
+							dependencyNode.appendNode('artifactId', it.name)
+							dependencyNode.appendNode('version', it.version)
+						}
+
+					}
+
+					configurations
+							.collectMany { it.allDependencies }
+							.findAll { it instanceof ProjectDependency }
+							.each
+							{
+								a ->
+									print "[" + a.properties + ":" + a.group + ":" + a.name + ":" + a.version + "\n"
+							}
+				}
+			}
+		}
+	}
+}
+
+android {
+	lintOptions {
+		abortOnError false
+	}
+
+	buildToolsVersion "19.1"
+	compileSdkVersion 16
+
+	if (pprops.exists()) {
+		File ksf = new File(keystore)
+		if (ksf.exists()) {
+			Properties keyprops = new Properties()
+			keyprops.load(new FileInputStream(pprops))
+			signingConfigs {
+				release {
+					storeFile file(keystore)
+					storePassword keyprops.getProperty("keystore_storePassword")
+					keyAlias keyprops.getProperty("keystore_keyAlias")
+					keyPassword keyprops.getProperty("keystore_keyPassword")
+				}
+			}
+			buildTypes {
+				release {
+					signingConfig signingConfigs.release
+				}
+			}
+		}
+	}
+
+	defaultConfig {
+		versionCode project.ext.versionCode
+		versionName project.ext.versionName
+		minSdkVersion 15
+		targetSdkVersion 19
+		buildTypes.debug.versionNameSuffix '-DEBUG'
+	}
+}
+

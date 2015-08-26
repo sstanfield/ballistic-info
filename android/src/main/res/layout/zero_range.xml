@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout android:id="@+id/zero_range_layout"
+				  android:orientation="vertical"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:layout_gravity="center_vertical"
+			>
+		<TextView
+				style="@style/Label.large"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="Zero:"
+				/>
+		<TextView android:id="@+id/zero_range_label"
+				  style="@style/Label"
+				  android:layout_width="fill_parent"
+				  android:layout_height="wrap_content"
+				  android:text="yards"
+				  android:textColor="#FFFFFFFF"
+				/>
+	</LinearLayout>
+
+	<TextView android:id="@+id/zero_range"
+			  style="@style/Label.val"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:layout_gravity="right"
+			  android:text="0"
+			  android:padding="5dp"
+			/>
+
+</merge>

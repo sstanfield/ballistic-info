@@ -1,0 +1,55 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+group = 'transapps'
+version = '1.2.0-SNAPSHOT'
+
+File pprops
+if (System.getenv().containsKey('GRADLE_CREDS_FILE')) {
+	pprops = new File(System.getenv()['GRADLE_CREDS_FILE'])
+} else {
+	pprops = new File("..${File.separator}transapps-key${File.separator}mavencreds.prop")
+}
+
+if (pprops.exists()) {
+	publishing {
+		repositories {
+			mavenLocal()
+			maven {
+				Properties mavenprops = new Properties()
+				mavenprops.load(new FileInputStream(pprops))
+				credentials {
+					username mavenprops.getProperty("username")
+					password mavenprops.getProperty("password")
+				}
+				if (project.version.endsWith('-SNAPSHOT')) {
+					url mavenprops.getProperty("nexus_snapshot")
+				} else {
+					url mavenprops.getProperty("nexus")
+				}
+			}
+		}
+
+		publications {
+			maven(MavenPublication) {
+				artifactId 'ballistic-lib'
+				from components.java
+			}
+		}
+	}
+}
+
+
+dependencies {
+	testCompile group: 'junit', name: 'junit', version: '4.+'
+}

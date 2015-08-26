@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+<LinearLayout android:orientation="vertical"
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+		>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			/>
+
+	<Spinner android:id="@+id/windspeed_unit_value"
+			 android:padding="5px"
+			 android:layout_width="fill_parent"
+			 android:layout_height="wrap_content"
+			/>
+
+	<transapps.ballistic.widgets.EditNumberSliders
+			android:id="@+id/wind_speed_config"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_alignParentBottom="true"
+			android:padding="2dp"
+			/>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:paddingTop="1dp"
+			android:paddingBottom="1dp"
+			/>
+
+	<Spinner android:id="@+id/windangle_unit_value"
+			 android:padding="5px"
+			 android:layout_width="fill_parent"
+			 android:layout_height="wrap_content"
+			/>
+
+	<transapps.ballistic.widgets.EditNumberSliders
+			android:id="@+id/wind_angle_config"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_alignParentBottom="true"
+			android:padding="2dp"
+			/>
+
+	<TextView android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:id="@+id/wind_angle_help"
+			  android:text="12:00 headwind, 3:00 right to left cross wind, 6:00 tailwind, etc"
+			  android:textSize="10dp"
+			/>
+</LinearLayout>
+</ScrollView>

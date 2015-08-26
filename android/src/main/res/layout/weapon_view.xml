@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:focusable="true"
+	android:focusableInTouchMode="true"
+	android:orientation="vertical"
+	 >
+		<Spinner android:layout_width="wrap_content"
+				 android:layout_height="wrap_content"
+				 android:textColor="#000000"
+				 android:id="@+id/weapon_spinner"
+				 android:visibility="gone"
+				 android:layout_weight="2" />
+		
+
+	<TableLayout android:layout_width="fill_parent"
+				 android:layout_height="wrap_content"
+				 android:stretchColumns="1">
+		<TableRow>
+			<TextView android:text="Name:"
+					  android:padding="5dp"
+					/>
+			<EditText  android:id="@+id/name_value"
+					  android:layout_width="0dp"
+					  android:layout_weight="2"
+					  />
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Description:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/description_value"
+					  android:layout_width="0dp"
+					  android:layout_weight="2"
+					/>
+								<!-- android:layout_weight="2" -->
+			
+		</TableRow>
+
+		<TableRow>
+			<TextView android:text="Velocity:"
+					  android:padding="5dp"
+					  android:layout_width="0dp"
+					  
+					  android:id="@+id/velocity_label"
+					/>
+			<EditText android:id="@+id/velocity_value"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<Spinner android:id="@+id/velocity_unit_value"
+					 android:padding="5dp"
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content"
+					/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Sight Height:"
+					  android:padding="5dp"
+					  android:id="@+id/sight_height_label"
+					/>
+			
+			<EditText android:id="@+id/sight_height_value"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+<Spinner android:id="@+id/height_unit_value"
+					 android:padding="5dp"
+					/>
+			
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Barrel Twist Direction:"
+					  android:padding="5dp"
+					/>
+			<Spinner android:id="@+id/twist_direction_value"
+					  android:padding="5dp"
+					  android:layout_weight="2" />
+					/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Barrel Twist(per turn):"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/twist_value"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<Spinner android:id="@+id/btwist_unit_value"
+					 android:padding="5dp"
+					/>
+		</TableRow>
+
+		<TableRow>
+			<TextView android:text="Table:"
+					  android:padding="5dp"
+					/>
+			<Spinner android:id="@+id/table_value"
+					  android:padding="5dp"
+					  android:layout_weight="2" />
+					  
+					/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="BC:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/bc_value"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					  android:layout_weight="2" />
+					/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Bullet Weight:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/weight_value"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<Spinner android:id="@+id/bweight_unit_value"
+					 android:padding="5dp"
+					/>
+			
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Bullet Calibre:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/calibre_value"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<Spinner android:id="@+id/bcalibre_unit_value"
+					 android:padding="5dp"
+					/>
+		</TableRow>
+				<TableRow>
+			<TextView android:text="Bullet Length:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/length_value"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<Spinner android:id="@+id/blength_unit_value"
+					 android:padding="5dp"
+					/>
+		</TableRow>
+	</TableLayout>
+</LinearLayout>
+</ScrollView>

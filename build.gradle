@@ -1,0 +1,32 @@
+def verCode = getVersionCode()
+def verName = getVersionName()
+def userHome = System.getProperty('user.home')
+
+allprojects {
+	repositories {
+		mavenCentral()
+		jcenter()
+	}
+
+	project.ext {
+		versionCode = verCode
+		versionName = verName
+		homeDir = userHome
+	}
+
+}
+
+def int getVersionCode() {
+	def cal = Calendar.instance
+	return cal.getTimeInMillis() / 1000L
+}
+
+def String getVersionName() {
+	def cal = Calendar.instance
+	def Y = cal.get(Calendar.YEAR)
+	def M = cal.get(Calendar.MONTH) + 1
+	def D = cal.get(Calendar.DATE)
+	def H = "git log --format=%h -1".execute().text.replaceAll(/\s*$/, '')
+	def buildNumber = System.getenv('bamboo.buildNumber')
+	return "$Y.$M.$D${H?"."+H:""}${buildNumber?"." + buildNumber:""}"
+}

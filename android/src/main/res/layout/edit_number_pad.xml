@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:background="#BF000000"
+			  android:layout_width="wrap_content"
+			  android:layout_height="match_parent">
+	<TextView android:id="@+id/numpadvalue"
+			  style="@style/NumPadEdit"
+			  android:layout_height="wrap_content"
+			  android:layout_width="fill_parent"
+			  android:gravity="center_horizontal"
+			  android:text=""/>
+	<LinearLayout android:layout_width="match_parent"
+				  android:layout_height="wrap_content"
+				  android:orientation="horizontal"
+				  android:paddingLeft="15dp"
+				  android:paddingRight="15dp">
+	<LinearLayout android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:orientation="vertical"
+				  android:paddingLeft="15dp"
+				  android:paddingRight="15dp">
+
+	<LinearLayout android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:orientation="horizontal"
+				  android:gravity="center_horizontal">
+		<TextView android:id="@+id/numpad1"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="1"/>
+		<TextView android:id="@+id/numpad2"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="2"/>
+		<TextView android:id="@+id/numpad3"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="3"/>
+	</LinearLayout>
+	<LinearLayout android:layout_width="match_parent"
+				  android:layout_height="wrap_content"
+				  android:orientation="horizontal"
+				  android:gravity="center_horizontal">
+		<TextView android:id="@+id/numpad4"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="4"/>
+		<TextView android:id="@+id/numpad5"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="5"/>
+		<TextView android:id="@+id/numpad6"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="6"/>
+	</LinearLayout>
+	<LinearLayout android:layout_width="match_parent"
+				  android:layout_height="wrap_content"
+				  android:orientation="horizontal"
+				  android:gravity="center_horizontal">
+		<TextView android:id="@+id/numpad7"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="7"/>
+		<TextView android:id="@+id/numpad8"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="8"/>
+		<TextView android:id="@+id/numpad9"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="9"/>
+	</LinearLayout>
+	<LinearLayout android:layout_width="match_parent"
+				  android:layout_height="wrap_content"
+				  android:orientation="horizontal"
+				  android:gravity="center_horizontal">
+		<TextView android:id="@+id/numpaddot"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="."/>
+		<TextView android:id="@+id/numpad0"
+				  style="@style/NumPadNumber"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:text="0"/>
+		<ImageView android:id="@+id/numpadbackspace"
+				   android:layout_width="wrap_content"
+				   android:layout_height="wrap_content"
+				   android:layout_gravity="center"
+				   android:clickable="true"
+				   android:src="@android:drawable/ic_input_delete"/>
+	</LinearLayout>
+	</LinearLayout>
+	<ImageButton android:id="@+id/numpadreturn"
+				 android:layout_width="wrap_content"
+				 android:layout_height="fill_parent"
+				 android:layout_gravity="center"
+				 android:src="@drawable/keyboard_return"/>
+	</LinearLayout>
+</LinearLayout>

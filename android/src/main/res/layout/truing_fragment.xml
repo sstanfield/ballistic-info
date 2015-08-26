@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content">
+	<TableLayout android:layout_width="fill_parent"
+				 android:layout_height="wrap_content"
+				 android:stretchColumns="1">
+		<TableRow>
+			<TextView android:text="Zero Range:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/true_zero"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<Spinner android:id="@+id/true_zero_unit_value"
+					 android:padding="5dp"
+					/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Truing Range:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/true_range"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<TextView android:text=""/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Elevation To Target:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/true_elevation"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<Spinner android:id="@+id/true_elevation_unit_value"
+					 android:padding="5dp"
+					/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Initial BC:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/true_initial_bc"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<TextView android:text=""/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Initial Velocity:"
+					  android:padding="5dp"
+					/>
+			<EditText android:id="@+id/true_initial_velocity"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<Spinner android:id="@+id/true_velocity_unit_value"
+					 android:padding="5dp"
+					/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Transonic Range:"
+					  android:padding="5dp"
+					/>
+			<TextView android:id="@+id/true_transonic"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<TextView android:text=""/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Subsonic Range:"
+					  android:padding="5dp"
+					/>
+			<TextView android:id="@+id/true_subsonic"
+					  android:padding="5dp"
+					  android:inputType="numberDecimal"
+					/>
+			<TextView android:text=""/>
+		</TableRow>
+
+	</TableLayout>
+
+	<Button android:id="@+id/true_solve_button"
+			android:text="Solve"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+	<TableLayout android:layout_width="match_parent"
+				 android:layout_height="wrap_content">
+		<TableRow>
+			<TextView android:text="Solved BC:"
+					  android:padding="5dp"
+					/>
+			<TextView android:id="@+id/true_solved_bc"
+					  android:layout_width="match_parent"
+					  android:padding="5dp"
+					/>
+			<Button android:id="@+id/true_savebc_button"
+					android:text="Save BC"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:visibility="invisible"/>
+		</TableRow>
+		<TableRow>
+			<TextView android:text="Solved Velocity:"
+					  android:padding="5dp"
+					/>
+			<TextView android:id="@+id/true_solved_velocity"
+					  android:layout_width="match_parent"
+					  android:padding="5dp"
+					/>
+			<Button android:id="@+id/true_savevelocity_button"
+					android:text="Save Velocity"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:visibility="invisible"/>
+		</TableRow>
+
+	</TableLayout>
+
+</LinearLayout>
+
+</ScrollView>

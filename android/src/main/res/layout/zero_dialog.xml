@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+<LinearLayout android:orientation="vertical"
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+		>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			/>
+
+	<transapps.ballistic.widgets.EditNumberSliders
+			android:id="@+id/zero_config"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_alignParentBottom="true"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+			android:paddingTop="2dp"
+			android:paddingBottom="15dp"
+			/>
+
+	<View	android:layout_width="fill_parent"
+			 android:layout_height="1dp"
+			 android:background="@android:color/darker_gray"/>
+
+	<TextView android:text="NOTE: These atmosperic settings are for the conditions when the rifle was zeroed NOT the current conditions."
+			  android:padding="5px"
+			  android:layout_height="wrap_content"
+			  android:layout_width="wrap_content"
+			/>
+
+	<include layout="@layout/atmo_settings"/>
+
+</LinearLayout>
+
+</ScrollView>

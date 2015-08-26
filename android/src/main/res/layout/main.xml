@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/drawer_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<!-- The main content view -->
+	<FrameLayout
+		android:id="@+id/content_frame"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+	<!-- The navigation drawer -->
+	<ScrollView
+		android:id="@+id/left_drawer"
+		android:layout_gravity="start"
+		android:background="#B0000000"
+		android:layout_width="240dp"
+		android:layout_height="match_parent">
+	<TableLayout android:layout_width="fill_parent"
+				 android:layout_height="wrap_content"
+				 android:stretchColumns="1">
+	<TableRow>
+		<ImageView
+			android:src="@drawable/menu_weapon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+			/>
+	<Spinner android:id="@+id/wep_spinner"
+			 android:padding="5px"
+			 android:layout_width="fill_parent"
+			 android:layout_height="wrap_content"
+			 android:textAppearance="?android:attr/textAppearanceLarge"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="6dip"
+			 android:minHeight="?android:attr/listPreferredItemHeight"
+			/>
+	</TableRow>
+
+	<ImageView
+		android:src="@android:drawable/divider_horizontal_dark"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:scaleType="fitXY"
+		/>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			/>
+
+	<TableRow>
+		<ImageView
+		    android:src="@drawable/menu_range_table"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+			/>
+	<TextView
+			  android:id="@+id/menu_table"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:textAppearance="?android:attr/textAppearanceLarge"
+			  android:gravity="center_vertical"
+			  android:paddingLeft="6dip"
+			  android:minHeight="?android:attr/listPreferredItemHeight"
+			  android:text="Range Table"
+			  android:clickable="true"
+			  android:onClick="goNavMenu"
+	/>
+	</TableRow>
+
+	<TableRow>
+		<ImageView
+			android:src="@drawable/menu_atmo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+			/>
+	<TextView
+			  android:id="@+id/menu_atmo"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:textAppearance="?android:attr/textAppearanceLarge"
+			  android:gravity="center_vertical"
+			  android:paddingLeft="6dip"
+			  android:minHeight="?android:attr/listPreferredItemHeight"
+			  android:text="Atmosphere"
+			  android:clickable="true"
+			  android:onClick="goNavMenu"
+	/>
+	</TableRow>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			/>
+	
+	<TableRow>
+		<ImageView
+			android:src="@drawable/menu_wind"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+			/>
+	<TextView
+			  android:id="@+id/menu_wind"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:textAppearance="?android:attr/textAppearanceLarge"
+			  android:gravity="center_vertical"
+			  android:paddingLeft="6dip"
+			  android:minHeight="?android:attr/listPreferredItemHeight"
+			  android:text="Wind"
+			  android:clickable="true"
+			  android:onClick="goNavMenu"
+	/>
+	</TableRow>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			/>
+
+	<TableRow>
+		<ImageView
+			android:src="@drawable/menu_angle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+			/>
+	<TextView
+			  android:id="@+id/menu_angle"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:textAppearance="?android:attr/textAppearanceLarge"
+			  android:gravity="center_vertical"
+			  android:paddingLeft="6dip"
+			  android:minHeight="?android:attr/listPreferredItemHeight"
+			  android:text="Angle"
+			  android:clickable="true"
+			  android:onClick="goNavMenu"
+	/>
+	</TableRow>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			/>
+
+	<TableRow>
+		<ImageView
+			android:src="@drawable/menu_zero"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+			/>
+	<TextView
+			  android:id="@+id/menu_zero"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:textAppearance="?android:attr/textAppearanceLarge"
+			  android:gravity="center_vertical"
+			  android:paddingLeft="6dip"
+			  android:minHeight="?android:attr/listPreferredItemHeight"
+			  android:text="Zero"
+			  android:clickable="true"
+			  android:onClick="goNavMenu"
+	/>
+	</TableRow>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			/>
+
+	<TableRow>
+		<ImageView
+			android:src="@drawable/menu_units"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+			/>
+		
+		<Spinner android:id="@+id/unit_spinner"
+			 android:padding="5dp"
+			 android:layout_width="fill_parent"
+			 android:layout_height="wrap_content"
+			 android:textAppearance="?android:attr/textAppearanceLarge"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="6dip"
+			 android:minHeight="?android:attr/listPreferredItemHeight"
+			/>
+	</TableRow>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			/>
+
+	<TableRow>
+		<ImageView
+			android:src="@drawable/menu_ce"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+			/>
+	<TextView
+			  android:id="@+id/menu_ce"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:textAppearance="?android:attr/textAppearanceLarge"
+			  android:gravity="center_vertical"
+			  android:paddingLeft="6dip"
+			  android:minHeight="?android:attr/listPreferredItemHeight"
+			  android:text="Coriolis Effect"
+			  android:clickable="true"
+			  android:onClick="goNavMenu"
+	/>
+	</TableRow>
+
+	<TableRow>
+		<ImageView
+				android:src="@drawable/menu_true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:scaleType="fitXY"
+				android:layout_gravity="center"
+				/>
+		<TextView
+				android:id="@+id/menu_true"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:gravity="center_vertical"
+				android:paddingLeft="6dip"
+				android:minHeight="?android:attr/listPreferredItemHeight"
+				android:text="Weapon Truing"
+				android:clickable="true"
+				android:onClick="goNavMenu"
+				/>
+	</TableRow>
+
+	<ImageView
+			android:src="@android:drawable/divider_horizontal_dark"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			/>
+	</TableLayout>
+	</ScrollView>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	>
+	<TextView
+		android:id="@+id/range"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="right"
+	/>
+	<TextView
+		android:id="@+id/velocity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="right"
+	/>
+	<TextView
+		android:id="@+id/energy"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="right"
+	/>
+	<TextView
+		android:id="@+id/drop"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="right"
+	/>
+	<TextView
+		android:id="@+id/tof"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="right"
+	/>
+	<TextView
+		android:id="@+id/drift"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="right"
+	/>
+</LinearLayout>

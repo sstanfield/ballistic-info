@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout android:id="@+id/drop_layout"
+				  android:orientation="vertical"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:layout_gravity="center_vertical"
+			>
+		<TextView
+				style="@style/Label.large"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="Drop:"
+				/>
+		<TextView android:id="@+id/drop_unit_label"
+				  style="@style/Label"
+				  android:layout_width="fill_parent"
+				  android:layout_height="wrap_content"
+				  android:text="MOA"
+				  android:textColor="#FFFFFFFF"
+				  android:drawableRight="@android:drawable/arrow_down_float"
+				/>
+	</LinearLayout>
+
+	<TextView android:id="@+id/drop"
+			  style="@style/Label.high"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:layout_gravity="right"
+			  android:text="0"
+			  android:padding="5dp"
+			/>
+
+</merge>

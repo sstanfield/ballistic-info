@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout android:id="@+id/wind_layout"
+				  android:orientation="vertical"
+				  android:layout_width="wrap_content"
+				  android:layout_height="fill_parent"
+				  android:gravity="center_vertical"
+			>
+		<TextView android:layout_width="fill_parent"
+				  style="@style/Label.large"
+				  android:layout_height="wrap_content"
+				  android:text="Wind: "
+				/>
+		<LinearLayout android:orientation="horizontal"
+					  android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+				>
+			<TextView android:id="@+id/windspeed"
+					  style="@style/Label"
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"
+					  android:text="0"
+					  android:textColor="#FFFFFFFF"
+					/>
+			<TextView android:layout_width="wrap_content"
+					  style="@style/Label.tiny"
+					  android:layout_height="wrap_content"
+					  android:text="MPH"
+					  android:id="@+id/windspeed_label"
+					/>
+			<TextView android:id="@+id/winddirection"
+					  style="@style/Label"
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"
+					  android:layout_marginLeft="5dp"
+					  android:text="0"
+					  android:textColor="#FFFFFFFF"
+					/>
+		</LinearLayout>
+	</LinearLayout>
+	<TextView android:id="@+id/windage"
+			  style="@style/Label.high"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:layout_gravity="right"
+			  android:text="0"
+			  android:padding="5dp"
+			/>
+</merge>
